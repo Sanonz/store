@@ -1,6 +1,10 @@
 ## ReduxStoreProvider
 这个库是为了简化 redux 创建 Action 和 Reducer 的过程，使创建过程语义化，提升应用自明性方便后期维护。
 
+* [安装](#安装)
+* [手册](#手册)
+* [例子](#例子)
+
 
 ## 安装
 ```shell
@@ -14,7 +18,7 @@ import ReduxStoreProvider from 'redux-store-provider'
 
 ### 成员
 
-* [ReduxStoreProvider](#type)
+* [ReduxStoreProvider](#new-reduxstoreprovider)
     * `static` [type(id)](#static-typeid--string) ⇒ `string`
     * `static` [config(options)](#static-configoptions--this) ⇒ `this`
     * `static` [.getInitialState()](#reduxstoreprovidergetinitialstate--object) ⇒ `Object`
@@ -65,11 +69,11 @@ ReduxStoreProvider.config({
 ```
 
 
-### ReduxStoreProvider.getInitialState() ⇒ `Object`
+### `static` ReduxStoreProvider.getInitialState() ⇒ `Object`
 获取单一型全局默认 Store 值
 
 
-### ReduxStoreProvider.getInitialStateList() ⇒ `Object`
+### `static` ReduxStoreProvider.getInitialStateList() ⇒ `Object`
 获取列表型全局默认 Store 值
 
 
