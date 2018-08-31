@@ -15,20 +15,19 @@ import ReduxStoreProvider from 'redux-store-provider'
 ### 成员
 
 * [ReduxStoreProvider](#type)
-    * `static` [type(id)](#type) ⇒ `string`
-    * `static` [config(options)](#config) ⇒ `this`
-    * `static` [.getInitialState()](#ReduxStoreProvider.getInitialState) ⇒ `Object`
-    * `static` [.getInitialStateList()](#ReduxStoreProvider.getInitialStateList) ⇒ `Object`
-    * [new ReduxStoreProvider()](#new_ReduxStoreProvider_new)
-    * [.addHandler(name, handler)](#ReduxStoreProvider.addHandler) ⇒ `this`
-    * [.setInitialState(value)](#ReduxStoreProvider.setInitialState) ⇒ `this`
-    * [.getInitialState()](#ReduxStoreProvider.getInitialState) ⇒ `Object`
-    * [.getReducer()](#ReduxStoreProvider.getReducer) ⇒ `function`
-    * [.createAction([actions])](#ReduxStoreProvider.createAction) ⇒ `Object`
-    * [.createActionList([actions])](#ReduxStoreProvider.createActionList) ⇒ `Object`
+    * `static` [type(id)](#static-typeid--string) ⇒ `string`
+    * `static` [config(options)](#static-configoptions--this) ⇒ `this`
+    * `static` [.getInitialState()](#reduxstoreprovidergetinitialstate--object) ⇒ `Object`
+    * `static` [.getInitialStateList()](#reduxstoreprovidergetinitialstatelist--object) ⇒ `Object`
+    * [new ReduxStoreProvider()](#new-reduxstoreprovider)
+    * [.addHandler(name, handler)](#reduxstoreprovideraddhandlername-handler--this) ⇒ `this`
+    * [.setInitialState(value)](#reduxstoreprovidersetinitialstatevalue--this) ⇒ `this`
+    * [.getInitialState()](#reduxstoreprovidergetinitialstate--object-1) ⇒ `Object`
+    * [.getReducer()](#reduxstoreprovidergetreducer--function) ⇒ `function`
+    * [.createAction([actions])](#reduxstoreprovidercreateactionactions--object) ⇒ `Object`
+    * [.createActionList([actions])](#reduxstoreprovidercreateactionlistactions--object) ⇒ `Object`
 
 
-<a name="type"></a>
 
 ### `static` type(id) ⇒ `string`
 生成一个在 Action 中使用的 `type` 字符串
@@ -37,7 +36,6 @@ import ReduxStoreProvider from 'redux-store-provider'
 | --- | --- | --- |
 | id | `string` | id value |
 
-<a name="config"></a>
 
 ### `static` config(options) ⇒ `this`
 全局配置，设置后将会覆盖默认设置并且在全局生效
@@ -66,17 +64,14 @@ ReduxStoreProvider.config({
 });
 ```
 
-<a name="ReduxStoreProvider.getInitialState"></a>
 
 ### ReduxStoreProvider.getInitialState() ⇒ `Object`
 获取单一型全局默认 Store 值
 
-<a name="ReduxStoreProvider.getInitialStateList"></a>
 
 ### ReduxStoreProvider.getInitialStateList() ⇒ `Object`
 获取列表型全局默认 Store 值
 
-<a name="new_ReduxStoreProvider_new"></a>
 
 ### new ReduxStoreProvider()
 初始化一个 Store 值
@@ -92,7 +87,6 @@ ReduxStoreProvider.config({
 const UserStore = new ReduxStoreProvider({ key: 'POSTS' });
 ```
 
-<a name="ReduxStoreProvider.addHandler"></a>
 
 ### ReduxStoreProvider.addHandler(name, handler) ⇒ `this`
 扩展一个方法，可以在 Action 中触发
@@ -102,7 +96,6 @@ const UserStore = new ReduxStoreProvider({ key: 'POSTS' });
 | name | `string` | 扩展方法名 |
 | handler | `function` | 扩展方法 |
 
-<a name="ReduxStoreProvider.setInitialState"></a>
 
 ### ReduxStoreProvider.setInitialState(value) ⇒ `this`
 覆盖默认 Store，仅在当前 Store 生效
@@ -111,7 +104,6 @@ const UserStore = new ReduxStoreProvider({ key: 'POSTS' });
 | --- | --- | --- |
 | value | `Object` | 数据 |
 
-<a name="ReduxStoreProvider.getInitialState"></a>
 
 ### ReduxStoreProvider.getInitialState() ⇒ `Object`
 获取当前 Store 的值
@@ -125,13 +117,11 @@ UserStore.getInitialState();
 // }
 ```
 
-<a name="ReduxStoreProvider.getReducer"></a>
 
 ### ReduxStoreProvider.getReducer() ⇒ `function`
 获取当前 Store 的 Reducer，包括默认和自定义
 
 
-<a name="ReduxStoreProvider.createAction"></a>
 
 ### ReduxStoreProvider.createAction([actions]) ⇒ `Object`
 创建单一型 Action，在需要更新 Store 的地方调用进行更新操作
@@ -168,7 +158,6 @@ const userAction = UserStore.createAction({
 store.dispatch(userAction.setName('Sanonz'));
 ```
 
-<a name="ReduxStoreProvider.createActionList"></a>
 
 ### ReduxStoreProvider.createActionList([actions]) ⇒ `Object`
 创建列表型 Action，在需要更新 Store 的地方调用进行更新操作
