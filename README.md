@@ -61,8 +61,8 @@ store.dispatch(UserStore.getAction().set_name('Sanonz'));
 * [ReduxStoreProvider](#new-reduxstoreprovider)
     * `static` [type(name)](#static-typename--string) ⇒ `string`
     * `static` [config(options)](#static-configoptions--this) ⇒ `this`
-    * `static` [.getInitialState()](#reduxstoreprovidergetinitialstate--object) ⇒ `Object`
-    * `static` [.getInitialStateList()](#reduxstoreprovidergetinitialstatelist--object) ⇒ `Object`
+    * `static` [.getInitialState()](#static-reduxstoreprovidergetinitialstate--object) ⇒ `Object`
+    * `static` [.getInitialStateList()](#static-reduxstoreprovidergetinitialstatelist--object) ⇒ `Object`
     * [new ReduxStoreProvider()](#new-reduxstoreprovider)
     * [.setInitialState(value)](#reduxstoreprovidersetinitialstatevalue--this) ⇒ `this`
     * [.getInitialState()](#reduxstoreprovidergetinitialstate--object-1) ⇒ `Object`
